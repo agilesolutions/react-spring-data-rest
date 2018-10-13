@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactTable from "react-table";
-import 'react-table/react-table.css';
+import DataTables from 'material-ui-datatables';
 import {SERVER_URL} from '../constants.js';
 import AddCar from './AddCar.js';
 import { confirmAlert } from 'react-confirm-alert';
@@ -10,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 
+
+// https://www.npmjs.com/package/material-ui-datatables
 class Carlist extends Component {
   constructor(props) {
     super(props);
@@ -175,8 +176,16 @@ class Carlist extends Component {
           </Grid>
         </Grid>
 
-        <ReactTable data={this.state.cars} columns={columns} 
-          filterable={true} pageSize={10}/>
+        <DataTables
+        height={'auto'}
+        selectable={false}
+        showRowHover={true}
+        showCheckboxes={false}
+        page={1}
+        count={100}
+      />
+        <!--ReactTable data={this.state.cars} columns={columns} 
+          filterable={true} pageSize={10}/-->
         <Snackbar           
           open={this.state.open}  onClose={this.handleClose} 
           autoHideDuration={1500} message={this.state.message} />
