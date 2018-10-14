@@ -10,7 +10,9 @@ import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 
 
-// https://www.npmjs.com/package/material-ui-datatables
+// https://hyojin.github.io/material-ui-datatables/
+// https://material.io/design/components/data-tables.html#
+// example from json https://github.com/gregnb/mui-datatables/issues/64
 class Carlist extends Component {
   constructor(props) {
     super(props);
@@ -129,40 +131,32 @@ class Carlist extends Component {
   };
 
   render() {
+	  
+	  const columns = [
+	                   {   
+	                       name: 'Name', 
+	                       field: 'name',
+	                       options: {
+	                           width: 70,
+	                       },
+	                   },
+	  
     const columns = [{
-      Header: 'Brand',
-      accessor: 'brand',
+      name: 'Brand',
+      filed: 'brand'
+    }, {
+      name: 'Model',
+      field: 'model'
+    }, {
+      name: 'Color',
+      field: 'color'
+    }, {
+      name: 'Year',
+      field: 'year'
+    }, {
+      name: 'Price â‚¬',
+      field: 'price',
       Cell: this.renderEditable
-    }, {
-      Header: 'Model',
-      accessor: 'model',
-      Cell: this.renderEditable
-    }, {
-      Header: 'Color',
-      accessor: 'color',
-      Cell: this.renderEditable
-    }, {
-      Header: 'Year',
-      accessor: 'year',
-      Cell: this.renderEditable
-    }, {
-      Header: 'Price â‚¬',
-      accessor: 'price',
-      Cell: this.renderEditable
-    }, {
-      id: 'savebutton',
-      sortable: false,
-      filterable: false,
-      width: 100,
-      accessor: '_links.self.href',
-      Cell: ({value, row}) => (<Button size="small" variant="flat" color="primary" onClick={()=>{this.updateCar(row, value)}}>Save</Button>)
-    }, {
-      id: 'delbutton',
-      sortable: false,
-      filterable: false,
-      width: 100,
-      accessor: '_links.self.href',
-      Cell: ({value}) => (<Button size="small" variant="flat" color="secondary" onClick={()=>{this.confirmDelete(value)}}>Delete</Button>)
     }]
 
     return (
@@ -177,6 +171,8 @@ class Carlist extends Component {
         </Grid>
 
         <DataTables
+        data={cars}
+        columns={columns}
         height={'auto'}
         selectable={false}
         showRowHover={true}
