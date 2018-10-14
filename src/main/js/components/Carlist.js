@@ -108,22 +108,6 @@ class Carlist extends Component {
     )
   }
  
-  renderEditable = (cellInfo) => {
-    return (
-      <div
-        style={{ backgroundColor: "#fafafa" }}
-        contentEditable
-        suppressContentEditableWarning
-        onBlur={e => {
-          const data = [...this.state.cars];
-          data[cellInfo.index][cellInfo.column.id] = e.target.innerHTML;
-          this.setState({ cars: data });
-        }}
-        dangerouslySetInnerHTML={{
-          __html: this.state.cars[cellInfo.index][cellInfo.column.id]
-        }}                
-      />
-    );
   }  
 
   handleClose = (event, reason) => {
@@ -131,16 +115,8 @@ class Carlist extends Component {
   };
 
   render() {
-	  
-	  const columns = [
-	                   {   
-	                       name: 'Name', 
-	                       field: 'name',
-	                       options: {
-	                           width: 70,
-	                       },
-	                   },
-	  
+
+	// handling columns
     const columns = [{
       name: 'Brand',
       filed: 'brand'
