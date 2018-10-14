@@ -2,6 +2,13 @@
 
 In this section, you will see how to get a bare-bones Spring Data REST application up and running quickly. Then you will build a simple UI on top of it using Facebook's React.js toolset.
 
+## meetup with MUI
+
+1. [Meet Material-UI](https://medium.freecodecamp.org/meet-your-material-ui-your-new-favorite-user-interface-library-6349a1c88a8c)
+2. [Material UI Core - introduction](https://material.io/design/introduction/#principles)
+3. [How to React JS with MUI](https://www.muicss.com/docs/v1/react/introduction)
+4. [Why and How to Pick Material UI for React Apps](http://www.gistia.com/react-material-ui-design/)
+
 ## Step 0 - Setting up your environment
 
 Feel free to {sourcedir}/basic[grab the code] from this repository and follow along.
