@@ -130,7 +130,7 @@ class Carlist extends Component {
       name: 'Year',
       field: 'year'
     }, {
-      name: 'Price â‚¬',
+      name: 'Price',
       field: 'price',
       Cell: this.renderEditable
     }]
@@ -147,17 +147,15 @@ class Carlist extends Component {
         </Grid>
 
         <DataTables
-        data={cars}
-        columns={columns}
-        height={'auto'}
-        selectable={false}
-        showRowHover={true}
-        showCheckboxes={false}
-        page={1}
-        count={100}
+        	data={cars}
+        	columns={columns}
+        	height={'auto'}
+        	selectable={false}
+        	showRowHover={true}
+        	showCheckboxes={false}
+        	page={1}
+        	count={100}
       />
-        <!--ReactTable data={this.state.cars} columns={columns} 
-          filterable={true} pageSize={10}/-->
         <Snackbar           
           open={this.state.open}  onClose={this.handleClose} 
           autoHideDuration={1500} message={this.state.message} />
