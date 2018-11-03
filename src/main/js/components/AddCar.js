@@ -8,7 +8,7 @@ class AddCar extends React.Component {
       this.state = {brand: '', model: '',  year: '', color: '', price: ''};
   }
 
-  handleChange(event) => {
+  handleChange = (event) => {
       this.setState(
           {[event.target.name]: event.target.value}
       );

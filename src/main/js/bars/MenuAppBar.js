@@ -12,7 +12,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import { browserHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -37,11 +37,6 @@ class MenuAppBar extends React.Component {
 
   handleChange = event => {
     this.setState({ auth: event.target.checked });
-    if (this.state.auth== true) {
-    	browserHistory.push({pathname: '/alertdialog', state:{message: 'logged in'}});
-    } else {
-    	browserHistory.push({pathname: '/alertdialog', state:{message: 'logged out'}});
-    }
   };
 
   handleMenu = event => {
