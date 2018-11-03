@@ -70,7 +70,7 @@ function ClippedDrawer(props) {
       			<List>{otherMailFolderListItems}</List>
       		</Drawer>
       	</GridListTile>
-       	<GridListTile cols={1} style={{ height: 800, width: 1200 }}>
+       	<GridListTile cols={1} style={{ height: 800, width: 1300 }}>
        	// https://stackoverflow.com/questions/49615742/how-to-properly-layout-main-contents-with-material-ui-next-mini-variant-drawer
        	// https://stackoverflow.com/questions/50801093/material-ui-drawer-selection-how-to-route
       		<main className={classes.content}>
