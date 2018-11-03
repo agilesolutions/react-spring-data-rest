@@ -1,42 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
-//import Carlist from './Carlist';
-import ClippedDrawer from './ClippedDrawer';
 import {SERVER_URL} from '../constants.js';
 
 
-class Login extends Component {
+
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {username: '', password: '', isAuthenticated: false, open: false};
-    console.log('start constructing');
-  }
+}
 
   login = () => {
     const user = {username: this.state.username, password: this.state.password};
-    fetch('login', {
-//        fetch(SERVER_URL + 'login', {
-      method: 'POST',
-      body: JSON.stringify(user)
-    })
-    .then(res => {
-      const jwtToken = res.headers.get('Authorization');
-      console.log('token value %s',jwtToken);
-      if (jwtToken !== null) {
-    	  console.log('token is valid');
-    	  sessionStorage.setItem("jwt", jwtToken);
-        this.setState({isAuthenticated: true});
-      }
-      else {
-    	  console.log('token is not valid');
-
-    	  this.setState({open: true});
-
-      }
-    })
-    .catch(err => console.error(err)) 
+    fetch('api')
+    	.then(response => response.text())
+    	.then(message => {alert(message)})
+    	.catch(err => alert(err)) 
   }
 
   handleChange = (event) => {
@@ -49,8 +30,11 @@ class Login extends Component {
 
   render() {
     if (this.state.isAuthenticated === true) {
-        //return (<Carlist />)
-        return (<ClippedDrawer />)
+        return (
+        	<div>
+        		logged in with password
+        	</div>
+        );
     }
     else {
       return (

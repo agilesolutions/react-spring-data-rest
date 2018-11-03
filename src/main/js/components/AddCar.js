@@ -1,5 +1,4 @@
 import React from 'react';
-import SkyLight from 'react-skylight';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
@@ -9,7 +8,7 @@ class AddCar extends React.Component {
       this.state = {brand: '', model: '',  year: '', color: '', price: ''};
   }
 
-  handleChange = (event) => {
+  handleChange(event) => {
       this.setState(
           {[event.target.name]: event.target.value}
       );
@@ -32,7 +31,7 @@ class AddCar extends React.Component {
   render() {
     return (
       <div>
-        <SkyLight hideOnOverlayClicked ref="addDialog">
+
           <h3>New car</h3>
           <form>
             <TextField label="Brand" placeholder="Brand"  name="brand" onChange={this.handleChange}/><br/>
@@ -43,7 +42,7 @@ class AddCar extends React.Component {
             <Button variant="outlined" style={{marginRight: 10}} color="primary" onClick={this.handleSubmit}>Save</Button>        
             <Button variant="outlined" color="secondary" onClick={this.cancelSubmit}>Cancel</Button>        
           </form>     
-        </SkyLight>
+
         <div>
             <Button variant="raised" color="primary" style={{'margin': '10px'}} onClick={() => this.refs.addDialog.show()}>New Car</Button>
         </div>

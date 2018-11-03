@@ -20,18 +20,27 @@
   },
   "homepage": "https://github.com/spring-guides/tut-react-and-spring-data-rest",
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "react": "16.4.0",
+    "react-confirm-alert": "latest",
+    "react-csv": "latest",
+    "react-dom": "16.4.0",
+    "react-router-dom": "4.3.1",
+    "material-ui-datatables": "latest"
   },
   "scripts": {
+    "start": "react-scripts start",
     "watch": "webpack --watch -d"
   },
+  "proxy": "http://localhost:8080",
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0"
+    "@babel/core": "latest",
+    "@babel/plugin-proposal-class-properties": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "babel-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
   }
 }
