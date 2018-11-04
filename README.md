@@ -131,6 +131,13 @@ plugin that will install Node, Node Package Manager (NPM) and execute the Webpac
 
 ## Components
 
-Big aim for each company is to provide itself with a library of higher abstraction reusable functional components which they can share among their developer community. Read about the [components provided here](./docu/elements.md). 
+Big aim for each company should be to provide their developer community a library of higher abstraction reusable functional components.
+
+But first you should understand the React Design Concepts behind [SFC Stateless Functional Components](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc) and how to [make a components](https://rangle.github.io/react-training/react-component/).
+
+## Components making up my SFC library are...
+
+1. [mui-datatables](https://github.com/gregnb/mui-datatables)
+2. [material ui basis components](https://material-ui.com/getting-started/supported-components/)
 
 
