@@ -1,7 +1,7 @@
 import React from 'react';
 import { Chart } from 'react-chartjs-2';
 import { Container } from 'mdbreact';
-
+//https://mdbootstrap.com/docs/react/advanced/charts/
 class PieChart extends React.Component {
     componentDidMount() {
         // Polar chart
