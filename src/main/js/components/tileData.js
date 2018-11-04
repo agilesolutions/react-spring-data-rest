@@ -1,4 +1,5 @@
-// This file is shared across the demos.
+// https://material.io/tools/icons/?style=baseline
+// https://codesandbox.io/s/vqo8yw5om7
 
 import React from 'react';
 import { Link } from "react-router-dom";
@@ -28,7 +29,7 @@ export const mailFolderListItems = (
       </ListItemIcon>
       <ListItemText primary="Calling" />
     </ListItem>
-    <ListItem button>
+    <ListItem button  component={Link} to="/charts">
       <ListItemIcon>
         <StationIcon />
       </ListItemIcon>
