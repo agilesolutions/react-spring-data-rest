@@ -8,6 +8,10 @@ While this project is in no way what I would consider "production quality" it do
 try to demonstrate more than just the simplistic "hello world" examples. Hopefully you
 will find it of use in getting started with these great Web development platform/frameworks.
 
+## view in code sandbox
+
+[codesandbox](https://codesandbox.io/s/github/agilesolutions/react-spring-data-rest)
+
 ## Installation
 Assuming you have Git and Maven on your local machine you will run the following commands. On the terminal of your
 choice change directories to where you want the cloned project files to download and run:
