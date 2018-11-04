@@ -31,4 +31,4 @@ class Example extends React.Component {
   }
 }
 
-export default DataTable;
+export default Example;

@@ -15,9 +15,6 @@ public class RestConfiguration extends RepositoryRestConfigurerAdapter{
 
       @Override
       public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-           //TODO: Expose for specific entity!
-           //config.exposeIdsFor(Officer.class);
-           //config.exposeIdsFor(Position.class);
 
            //TODO: Expose id for all entities!
            entityManager.getMetamodel().getEntities().forEach(entity->{

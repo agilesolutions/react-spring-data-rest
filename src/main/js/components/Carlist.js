@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import EnhancedTable from '../tables/EnhancedTable';
+import MUIDataTable from "mui-datatables";
 
-// https://hyojin.github.io/material-ui-datatables/
-// https://material.io/design/components/data-tables.html#
-// example from json https://github.com/gregnb/mui-datatables/issues/64
+// https://www.npmjs.com/package/mui-datatables
 class Carlist extends React.Component {
   constructor(props) {
     super(props);
@@ -28,17 +26,36 @@ class Carlist extends React.Component {
   
 
 
-
   render() {
 	  
-	  const content = this.state.cars;
+	  const data = this.state.cars;
+	  const rows = [];
+	  
+	  data.map(r => {
+		  var row = [];
+		  row.push(r.brand);
+		  row.push(r.model);
+		  row.push(r.color);
+		  row.push(r.registerNumber);
+		  row.push(r.year);
+		  row.push(r.price);
+		  
+		  rows.push(row);});
+	  
+	  
+	    const columns = ["brand", "model", "color", "registerNumber", "year", "price"];
+
+	    const options = {
+	      filter: true,
+	      filterType: 'dropdown',
+	      responsive: 'stacked',
+	    };
+
 	  
 
     return (
-    		<div>
-    		 	<EnhancedTable rows={this.state.cars}/>
-    		</div>
-    );
+    	   <MUIDataTable title={"ACME Employee list"} data={rows} columns={columns} options={options} />
+      );
   }
 }
 
