@@ -14,6 +14,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ReportIcon from '@material-ui/icons/RecordVoiceOver';
 
+// https://mdbootstrap.com/docs/react/advanced/charts/
+
+
 
 export const mailFolderListItems = (	
   <div>
@@ -29,13 +32,13 @@ export const mailFolderListItems = (
       </ListItemIcon>
       <ListItemText primary="Calling" />
     </ListItem>
-    <ListItem button  component={Link} to="/charts">
+    <ListItem button  component={Link} to="/linechart">
       <ListItemIcon>
         <StationIcon />
       </ListItemIcon>
       <ListItemText primary="Fill up" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/piechart">
       <ListItemIcon>
         <DraftsIcon />
       </ListItemIcon>
@@ -46,13 +49,13 @@ export const mailFolderListItems = (
 
 export const otherMailFolderListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component={Link} to="/barchart">
       <ListItemIcon>
         <MailIcon />
       </ListItemIcon>
       <ListItemText primary="All mail" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/polarchart">
       <ListItemIcon>
         <DeleteIcon />
       </ListItemIcon>

@@ -17,7 +17,10 @@ import Carlist from './Carlist';
 import AddCar from './AddCar';
 import FormDialog from '../dialogs/FormDialog';
 import AlertDialog from '../dialogs/AlertDialog';
-import ChartsPage from '../charts/ChartsPage';
+import LineChart from '../charts/LineChart';
+import PieChart from '../charts/PieChart';
+import BarChart from '../charts/BarChart';
+import PolarChart from '../charts/PolarChart';
 import { Switch, Route } from 'react-router-dom'
 
 
@@ -81,7 +84,10 @@ function ClippedDrawer(props) {
    	        	<Route path='/addcar' component={AddCar} />
    	        	<Route path='/dialog' component={FormDialog} />
    	        	<Route path='/alertdialog' component={AlertDialog} />
-   	        	<Route path='/charts' component={ChartsPage} />
+   	        	<Route path='/linechart' component={LineChart} />
+   	        	<Route path='/piechart' component={PieChart} />
+   	        	<Route path='/barchart' component={BarChart} />
+   	        	<Route path='/polarchart' component={PolarChart} />
    	        </Switch>
       		</main>
       	</GridListTile>

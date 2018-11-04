@@ -30,7 +30,7 @@ const data = {
   ]
 };
 
-class ChartsPage extends React.Component {
+class LineChart extends React.Component {
   render() {
     return (
     <Container>
@@ -41,4 +41,4 @@ class ChartsPage extends React.Component {
 
 };
 
-export default ChartsPage;
+export default LineChart;
