@@ -10,9 +10,9 @@ will find it of use in getting started with these great Web development platform
 
 ## view in code sandbox
 
-<dl>
+<div markdown="2">
 <iframe src="https://codesandbox.io/embed/new?codemirror=1&highlights=11,12,13,14" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-</dl>
+</div>
 
 [codesandbox](https://codesandbox.io/s/github/agilesolutions/react-spring-data-rest)
 
